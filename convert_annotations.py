@@ -42,7 +42,7 @@ for subset in args.subsets:
 
     # Select correct source files for each subset        
     if subset == 'train' and args.version != 'challenge_2019':
-        category_sourcefile = 'class-descriptions-boxable.csv'
+        category_sourcefile = 'oidv7-class-descriptions-boxable.csv'
         image_sourcefile = 'train-images-boxable-with-rotation.csv'
         annotation_sourcefile = 'train.csv'
         image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
@@ -51,38 +51,38 @@ for subset in args.subsets:
         segmentation_folder = 'annotations/validation_masks/'
 
     elif subset == 'val' and args.version != 'challenge_2019':
-        category_sourcefile = 'class-descriptions-boxable.csv'
-        image_sourcefile = 'train-images-boxable-with-rotation.csv'
+        category_sourcefile = 'oidv7-class-descriptions-boxable.csv'
+        image_sourcefile = 'validation-images-with-rotation.csv'
         annotation_sourcefile = 'val.csv'
-        image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
+        image_label_sourcefile = 'validation-annotations-human-imagelabels-boxable.csv'
         image_size_sourcefile = None
         segmentation_sourcefile = 'validation-annotations-object-segmentation.csv'
         segmentation_folder = 'annotations/validation_masks/'
 
     elif subset == 'test' and args.version != 'challenge_2019':
-        category_sourcefile = 'class-descriptions-boxable.csv'
-        image_sourcefile = 'train-images-boxable-with-rotation.csv'
+        category_sourcefile = 'oidv7-class-descriptions-boxable.csv'
+        image_sourcefile = 'test-images-with-rotation.csv'
         annotation_sourcefile = 'test.csv'
-        image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
+        image_label_sourcefile = 'test-annotations-human-imagelabels-boxable.csv'
         image_size_sourcefile = None
 
-    elif subset == 'train' and args.version == 'challenge_2019':
-        category_sourcefile = 'challenge-2019-classes-description-500.csv'
-        image_sourcefile = 'train-images-boxable-with-rotation.csv'
-        annotation_sourcefile = 'challenge-2019-train-detection-bbox.csv'
-        image_label_sourcefile = 'challenge-2019-train-detection-human-imagelabels.csv'
-        image_size_sourcefile = 'train_sizes-00000-of-00001.csv'
-        segmentation_sourcefile = 'challenge-2019-train-segmentation-masks.csv'
-        segmentation_folder = 'annotations/challenge_2019_train_masks/'
+#     elif subset == 'train' and args.version == 'challenge_2019':
+#         category_sourcefile = 'challenge-2019-classes-description-500.csv'
+#         image_sourcefile = 'train-images-boxable-with-rotation.csv'
+#         annotation_sourcefile = 'challenge-2019-train-detection-bbox.csv'
+#         image_label_sourcefile = 'challenge-2019-train-detection-human-imagelabels.csv'
+#         image_size_sourcefile = 'train_sizes-00000-of-00001.csv'
+#         segmentation_sourcefile = 'challenge-2019-train-segmentation-masks.csv'
+#         segmentation_folder = 'annotations/challenge_2019_train_masks/'
 
-    elif subset == 'val' and args.version == 'challenge_2019':
-        category_sourcefile = 'challenge-2019-classes-description-500.csv'
-        image_sourcefile = 'validation-images-with-rotation.csv'
-        annotation_sourcefile = 'challenge-2019-validation-detection-bbox.csv'
-        image_label_sourcefile = 'challenge-2019-validation-detection-human-imagelabels.csv'
-        image_size_sourcefile = 'validation_sizes-00000-of-00001.csv'
-        segmentation_sourcefile = 'challenge-2019-validation-segmentation-masks.csv'
-        segmentation_folder = 'annotations/challenge_2019_validation_masks/'
+#     elif subset == 'val' and args.version == 'challenge_2019':
+#         category_sourcefile = 'challenge-2019-classes-description-500.csv'
+#         image_sourcefile = 'validation-images-with-rotation.csv'
+#         annotation_sourcefile = 'challenge-2019-validation-detection-bbox.csv'
+#         image_label_sourcefile = 'challenge-2019-validation-detection-human-imagelabels.csv'
+#         image_size_sourcefile = 'validation_sizes-00000-of-00001.csv'
+#         segmentation_sourcefile = 'challenge-2019-validation-segmentation-masks.csv'
+#         segmentation_folder = 'annotations/challenge_2019_validation_masks/'
 
     # Load original annotations
     print('loading original annotations ...', end='\r')
