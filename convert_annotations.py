@@ -44,29 +44,26 @@ for subset in args.subsets:
     if subset == 'train' and args.version != 'challenge_2019':
         category_sourcefile = 'class-descriptions-boxable.csv'
         image_sourcefile = 'train-images-boxable-with-rotation.csv'
-        if args.version == 'v6':
-            annotation_sourcefile = 'oidv6-train-annotations-bbox.csv'
-        else:
-            annotation_sourcefile = 'train-annotations-bbox.csv'
+        annotation_sourcefile = 'train.csv'
         image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
-        image_size_sourcefile = 'train_sizes-00000-of-00001.csv'
+        image_size_sourcefile = None
         segmentation_sourcefile = 'validation-annotations-object-segmentation.csv'
         segmentation_folder = 'annotations/validation_masks/'
 
     elif subset == 'val' and args.version != 'challenge_2019':
         category_sourcefile = 'class-descriptions-boxable.csv'
-        image_sourcefile = 'validation-images-with-rotation.csv'
-        annotation_sourcefile = 'validation-annotations-bbox.csv'
-        image_label_sourcefile = 'validation-annotations-human-imagelabels-boxable.csv'
-        image_size_sourcefile = 'validation_sizes-00000-of-00001.csv'
+        image_sourcefile = 'train-images-boxable-with-rotation.csv'
+        annotation_sourcefile = 'val.csv'
+        image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
+        image_size_sourcefile = None
         segmentation_sourcefile = 'validation-annotations-object-segmentation.csv'
         segmentation_folder = 'annotations/validation_masks/'
 
     elif subset == 'test' and args.version != 'challenge_2019':
         category_sourcefile = 'class-descriptions-boxable.csv'
-        image_sourcefile = 'test-images-with-rotation.csv'
-        annotation_sourcefile = 'test-annotations-bbox.csv'
-        image_label_sourcefile = 'test-annotations-human-imagelabels-boxable.csv'
+        image_sourcefile = 'train-images-boxable-with-rotation.csv'
+        annotation_sourcefile = 'test.csv'
+        image_label_sourcefile = 'train-annotations-human-imagelabels-boxable.csv'
         image_size_sourcefile = None
 
     elif subset == 'train' and args.version == 'challenge_2019':
