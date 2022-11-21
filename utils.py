@@ -60,7 +60,7 @@ def convert_category_annotations(orginal_category_info):
     num_categories = len(orginal_category_info)
     for i in range(num_categories):
         cat = {}
-        cat['id'] = i + 1
+        cat['id'] = i
         cat['name'] = orginal_category_info[i][1]
         cat['freebase_id'] = orginal_category_info[i][0]
         
